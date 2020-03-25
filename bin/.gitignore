@@ -1,17 +1,4 @@
-/HelloWorld.class
 /Person.class
-/common/
-/ex01start/
-/ex02variable/
-/ex03operator/
-/ex04controlstatement/
-/ex05method/
-/ex06array/
-/ex07string/
-/ex08class/
-/ex09package/
-/ex10accessmodifier/
-/ex11static/
 /ex12inheritance/
 /ex13interface/
 /ex14innerclass/
@@ -19,9 +6,7 @@
 /ex16exception/
 /ex17collection/
 /ex18lambda/
-/ex19thread.zip
 /ex19thread/
-/ex20io.zip
 /ex20io/
 /ex21jdbc/
 /gettersetter.class
