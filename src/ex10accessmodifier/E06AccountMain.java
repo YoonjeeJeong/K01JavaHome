@@ -1,8 +1,6 @@
 package ex10accessmodifier;
 
 public class E06AccountMain {
-
-
 		
 	public static void main(String[] args) {
 		//DAO객체 생성

@@ -144,9 +144,12 @@ class FriendInfoHandler {
 		String iName, iPhone, iAddr, iNickname, iMajor;
 		
 		//공통사항 입력받기
-		System.out.println("이름: "); iName = scan.nextLine();
-		System.out.println("전화번호: ");iPhone = scan.nextLine();
-		System.out.println("주소: ");iAddr = scan.nextLine();
+		System.out.println("이름: "); 
+		iName = scan.nextLine();
+		System.out.println("전화번호: ");
+		iPhone = scan.nextLine();
+		System.out.println("주소: ");
+		iAddr = scan.nextLine();
 		
 		/*
 		 1. 친구정보를 입력받은 후...
@@ -155,7 +158,8 @@ class FriendInfoHandler {
 		 */
 		if(choice==1) {
 			//고딩친구 입력
-			System.out.println("별명: "); iNickname = scan.nextLine();
+			System.out.println("별명: "); 
+			iNickname = scan.nextLine();
 			HighFriend high = 
 					new HighFriend(iName, iPhone, iAddr, iNickname);
 			myFriends[numOfFriends++] = high;

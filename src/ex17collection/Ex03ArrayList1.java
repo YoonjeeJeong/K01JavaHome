@@ -91,6 +91,8 @@ public class Ex03ArrayList1 {
 		 remove(인덱스) : 인덱스를 통해서 삭제를 진행한 후
 		 삭제가 완료되면 해당 객체를 반환한다.
 		 인덱스가 자동으로 재부여 된다. */
+		System.out.println("========================");
+		System.out.println("삭제하는 방법: ");
 		Object obj = list.remove(2);
 		System.out.println("삭제된 개체: "+ obj);
 		

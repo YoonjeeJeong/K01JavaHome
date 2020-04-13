@@ -6,9 +6,8 @@ package ex13interface;
  	클래스는 반드시 추상메소드를 오버라이딩 해야함.
  - 클래스의 상속관계에서의 설계도 역할을 한다
  - 객체생성은 할 수 없으나 그 외 참조변수, 상속등의 모든 기능을 
- 	갖고 있다.
- 	
- 추상메소드
+ 	갖고 있다.	
+ <추상메소드>
   - 오버라이딩의 목적으로 만들어진다
   - 함수의 실행부가 없기 때문에 {}를 쓰지 않고 함수의 원형에 ;을 붙여준다 */
 
@@ -36,11 +35,8 @@ class PersonalInfoDTO {
 		return juminNum;
 	}	
 }
-
-/*
- 제공된 추상클래스를 상속하여 사람의 정보를 저장하는 기능과,
- 검색의 기능을 구현한 클래스.
- */
+/*제공된 추상클래스를 상속하여 사람의 정보를 저장하는 기능과,
+ 검색의 기능을 구현한 클래스.	*/
 class PersonalNumberStorageExt extends PersonalNumberStoragesAbs {
 	//멤버변수
 	PersonalInfoDTO[] personalArr;//정보저장용 객체배열
@@ -49,24 +45,17 @@ class PersonalNumberStorageExt extends PersonalNumberStoragesAbs {
 	//생성자
 	public PersonalNumberStorageExt(int arrSize) {
 		personalArr = new PersonalInfoDTO[arrSize];
-		numOfPerInfo = 0;
-		
-		
-		
+		numOfPerInfo = 0;		
 	}
-	/*
-	 전달받은 인자를 통해 PersonalInfoDTO객체를 생성후 객체배열에
-	 저장한다
-	 */
+	/*전달받은 인자를 통해 PersonalInfoDTO객체를 생성후 객체배열에
+	 저장한다	*/
 	@Override
 	public void addPersonalInfo(String juminNum, String name) {
 		personalArr[numOfPerInfo] =
 				new PersonalInfoDTO(name, juminNum);
 		numOfPerInfo++;
-	}
-	
-	/*
-	주민번호를 인자로 전달받아 객체배열에 저장된 정보를 검색한 후
+	}	
+	/*주민번호를 인자로 전달받아 객체배열에 저장된 정보를 검색한 후
 	일치하는 경우에만 이름을 반환한다. */
 	@Override
 	public String searchPersonalInfo(String juminNum) {
@@ -84,12 +73,10 @@ public class E02AbstractToInterface1 {
 	public static void main(String[] args) {
 		
 		PersonalNumberStorageExt storage =
-				new PersonalNumberStorageExt(10);
-		
+				new PersonalNumberStorageExt(10);		
 		//정보저장
 		storage.addPersonalInfo("9201234-2222222", "김광수");
 		storage.addPersonalInfo("9201234-2222333", "김정수");
-		
 		//검색
 		System.out.println(storage.searchPersonalInfo("9201234-2222222"));
 		System.out.println(storage.searchPersonalInfo("9201234-2222333"));

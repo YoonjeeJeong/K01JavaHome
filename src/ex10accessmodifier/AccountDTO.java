@@ -38,7 +38,4 @@ public class AccountDTO {
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
-	
-	
-
 }

@@ -32,10 +32,8 @@ public class Ex03ArrayList2 {
 			st.showInfo();
 		}
 		
-		/*
-		 인스턴스 삭제 : 인덱스가 아닌 객체의 참조값을 통해 삭제하는 경우
-		 중복된 값이 있으면 앞에있는 객체 하나만 삭제된다
-		 */
+		/*인스턴스 삭제 : 인덱스가 아닌 객체의 참조값을 통해 삭제하는 경우
+		 중복된 값이 있으면 앞에있는 객체 하나만 삭제된다 */
 		list2.remove(st2);
 		System.out.println("[중복 저장된 객체 삭제후]");
 		for(Student st: list2) {
@@ -45,10 +43,8 @@ public class Ex03ArrayList2 {
 		Iterator<Student> it2 = list2.iterator();
 		while(it2.hasNext()) {
 		/*	Student student = it2.next();
-			student.showInfo(); */
-			
-			/*
-			아래는 위 주석블록과 동일한 문장임. next()메소드를 통해 객체를 가져온 후
+			student.showInfo(); */		
+			/*아래는 위 주석블록과 동일한 문장임. next()메소드를 통해 객체를 가져온 후
 			showInfo()메소드로 객체의 내용출력. */
 			it2.next().showInfo();
 		}
@@ -65,8 +61,7 @@ public class Ex03ArrayList2 {
 		}
 		//인덱스를 통해 삭제: 삭제 성공시 해당 객체가 반환된다
 		System.out.println("삭제된 개체 이름: " + list2.remove(2).name);//2번 인덱스는 공유임
-		
-		
+				
 		//인스턴스 참조값을 통한 삭제: 삭제 성공시 boolean 값이 반환된다
 		list2.remove(st1);
 		System.out.println("[인스턴스 삭제 후]");

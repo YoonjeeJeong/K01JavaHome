@@ -6,7 +6,9 @@ import java.util.Scanner;
 import common.Student;
 
 public class QuArrayList {
-/*검색할 이름을 입력하세요:가길동
+private static final int browse = 0;
+
+	/*검색할 이름을 입력하세요:가길동
 오버라이딩 한 equals() 호출됨:가길동
 [검색되었습니다]
 [삭제후 정보출력]
@@ -34,7 +36,7 @@ public class QuArrayList {
 		System.out.print("검색할 이름을 입력하세요");
 		Scanner scan = new Scanner(System.in);
 		String search = scan.nextLine();
-		int browse = 0, index = 0; 
+		int index = -1;//인덱스는 0이상이므로 초기값은 -1로 지정함 
 		//2.확장for문으로 컬렉션 전체를 접근
 		for(Student student : list) {
 			if(search==student.name) {

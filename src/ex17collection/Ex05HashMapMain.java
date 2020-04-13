@@ -16,13 +16,11 @@ public class Ex05HashMapMain {
 
 	public static void main(String[] args) {
 		//Map컬렉션 생성. key와 value는 String형으로 선언.
-		HashMap<String, String> map = 
-				new HashMap<String, String>();
+		HashMap<String, String> map = new HashMap<String, String>();
 		
 		/* 객체저장: 객체 저장시 기존에 저장된 동일한 key값이 존재하면 
 		 이전 객체가 반환됨. 만약 처음이라면 null값이 반환됨.*/
-		System.out.println("name이라는 키값으로 저장된 이전의 값:" +
-				map.put("name", "홍길동"));
+		System.out.println("name이라는 키값으로 저장된 이전의 값:"+map.put("name", "홍길동"));
 
 		int number = 20;
 		//map.put("age", number);//에러: value타입이 안 맞음

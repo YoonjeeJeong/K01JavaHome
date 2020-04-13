@@ -1,6 +1,5 @@
 package ex13interface;
-/*
- 	추상 클래스를 interface로 변경하기:
+/* 추상 클래스를 interface로 변경하기:
  	- abstract class => interface	
  	- 메소드의 경우 public abstract를 제거
  	- 멤버상수인 경우 public static final을 제거  */
@@ -11,7 +10,6 @@ interface PersonalNumberStoragesInter {
 			String name);
 	String searchPersonalInfo(String juminNum);
 }
-
 //사람의 정보를 저장할 용도의VO클래스. 혹은 VO클래스라고도 한다.
 class PersonalInfoVO {
 	//멤버변수
@@ -29,13 +27,10 @@ class PersonalInfoVO {
 		return juminNum;
 	}	
 }
-
-/*
- 클래스가 클래스를 상속받을때 => extends 사용
+/*클래스가 클래스를 상속받을때 => extends 사용
  클래스가 인터페이스를 상속받을때 => implements 사용
- 인터페이스가 인터페이스를 상속받을때 =>  extends 사용
- 
- extends는 '상속'이라 표현하고, implements는 '구현'이라 표현했다.	*/
+ 인터페이스가 인터페이스를 상속받을때 =>  extends 사용 
+ >>>extends는 '상속'이라 표현하고, implements는 '구현'이라 표현했다.	*/
 class PersonalNumberStorageImpl implements PersonalNumberStoragesInter {
 	//멤버변수
 	PersonalInfoVO[] personalArr;//정보저장용 객체배열
@@ -44,24 +39,17 @@ class PersonalNumberStorageImpl implements PersonalNumberStoragesInter {
 	//생성자
 	public PersonalNumberStorageImpl(int arrSize) {
 		personalArr = new PersonalInfoVO[arrSize];
-		numOfPerInfo = 0;
-		
-		
-		
+		numOfPerInfo = 0;		
 	}
-	/*
-	 전달받은 인자를 통해 PersonalInfoVO객체를 생성후 객체배열에
-	 저장한다
-	 */
+	/* 전달받은 인자를 통해 PersonalInfoVO객체를 생성후 객체배열에
+	 저장한다 */
 	@Override
 	public void addPersonalInfo(String juminNum, String name) {
 		personalArr[numOfPerInfo] =
 				new PersonalInfoVO(name, juminNum);
 		numOfPerInfo++;
 	}
-	
-	/*
-	주민번호를 인자로 전달받아 객체배열에 저장된 정보를 검색한 후
+	/*주민번호를 인자로 전달받아 객체배열에 저장된 정보를 검색한 후
 	일치하는 경우에만 이름을 반환한다. */
 	@Override
 	public String searchPersonalInfo(String juminNum) {
@@ -79,12 +67,10 @@ public class E02AbstractToInterface2 {
 	public static void main(String[] args) {
 		
 		PersonalNumberStoragesInter storage =
-				new PersonalNumberStorageImpl(10);
-		
+				new PersonalNumberStorageImpl(10);		
 		//정보저장
 		storage.addPersonalInfo("9201234-2222222", "김광수");
-		storage.addPersonalInfo("9201234-2222333", "김정수");
-		
+		storage.addPersonalInfo("9201234-2222333", "김정수");		
 		//검색
 		System.out.println(storage.searchPersonalInfo("9201234-2222222"));
 		System.out.println(storage.searchPersonalInfo("9201234-2222333"));

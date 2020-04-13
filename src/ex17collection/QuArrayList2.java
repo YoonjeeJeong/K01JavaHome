@@ -36,6 +36,8 @@ public class QuArrayList2 {
 			System.out.println("객체의 이름:"+ st.getName());
 			//객체의 참조값을 통해 List내의 index값을 찾음
 			if(st.getName().equals(search)) {
+				//객체의 참조값을 통해 list내의 index값을 찾음
+				index = list.indexOf(st);
 			//해당 객체를 찾으면 즉시 루프 탈출
 			break;				
 			}
@@ -46,18 +48,18 @@ public class QuArrayList2 {
 				System.out.println("\n검색된 결과가 없습니다");
 			}
 			else {
-		//검색결과 있을때…검색된 데이터 삭제
-			System.out.println("\n결과있음");
-			System.out.println("삭제된 객체의 정보출력");
-			/*인덱스를 통해 컬렉션에 저장된 객체를 삭제하면
-			 해당 객체를 반환하게 되므로 객체의 정보를 출력할 수 있다*/
-			list.remove(index).showInfo();
+				//검색결과 있을때…검색된 데이터 삭제
+				System.out.println("\n결과있음");
+				System.out.println("삭제된 객체의 정보출력");
+				/*인덱스를 통해 컬렉션에 저장된 객체를 삭제하면
+				 해당 객체를 반환하게 되므로 객체의 정보를 출력할 수 있다*/
+				list.remove(index).showInfo();
 			}
 
 		//4.전체정보 출력
-		System.out.println("전체 정보 출력");
-		for(Student st :list) {
-			System.out.println(st.getInfo());
+			System.out.println("전체 정보 출력");
+			for(Student st :list) {
+				System.out.println(st.getInfo());
 		}
 	}		
 }

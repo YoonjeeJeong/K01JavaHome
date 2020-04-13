@@ -14,7 +14,6 @@ class AbsClassChild1 extends AbsClass1 {
 	//자식클래스에서 확장한 변수와 메소드
 	int newVar;
 	void newMethod() {
-		
 	}
 	/*
 	 추상메소드를 포함하지 않은 추상클래스를 상속하면 오버라이딩은 강제사항이 아님.
@@ -59,12 +58,9 @@ public class E01AbstractBasic {
 		absClass2 absClass2 = new absClassChild2();
 		absClass2.absMethod(100);
 		((absClassChild2)absClass2).newMethod();/*
-		 부모타임의 참조변수로 자식에게 접근하려면 다운캐스닝(강제형변환) 후 접근해야한다.
-		 */
+		 부모타임의 참조변수로 자식에게 접근하려면 다운캐스닝(강제형변환) 후 접근해야한다. */		
 		
-		
-		/*
-		 추상클래스내에 선언된 정적멤버는 오버라이딩의 대상이 될 수 없으므로 static이 가진
+		/*추상클래스내에 선언된 정적멤버는 오버라이딩의 대상이 될 수 없으므로 static이 가진
 		 기본규칙을 따른다. 클래스명으로 접근한다. */
 		AbsClass1.StaticMethod();
 		AbsClassChild1.StaticMethod();

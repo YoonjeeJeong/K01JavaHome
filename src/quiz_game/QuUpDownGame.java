@@ -40,7 +40,7 @@ class Game {
 	}
 	void restart() {
 		int ask;
-		System.out.println("다시 하기겠습니까? 1.재시작 0. 종료");
+		System.out.println("다시 하시겠습니까? 1.재시작 0. 종료");
 		ask = scan.nextInt();
 		
 		if(!(ask==0 || ask==1)) {
@@ -49,6 +49,8 @@ class Game {
 		}
 		else {
 			if(ask==1) {
+				System.out.println("--------------------");
+				System.out.println("게임 다시 시작!");
 				randomGame();
 			}
 		}		
